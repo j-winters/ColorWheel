@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Color Term Categories</title>
+
+
+
+      <link rel="stylesheet" href="static/css/style.css">
+
+
+</head>
+
+<body>
+    <div class="grid-container">
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+      <div class="grid-item"></div>
+    </div>
+
+    <p>
+    <button class="button" id = 'submission' style="vertical-align:middle"><span>Next </span></button>
+    <p id = "Lexical"></p>
+    </p>
+
+
+  <script id="colors" type="text/json">
+[
+    {
+
+        "rgb": [238, 108, 43]
+    },
+    {
+
+        "rgb": [238, 130, 43]
+    },
+    {
+
+        "rgb": [238, 151, 43]
+    },
+    {
+
+        "rgb": [238, 170, 43]
+    },
+    {
+
+        "rgb": [238, 191, 43]
+    },
+    {
+
+        "rgb": [238, 214, 43]
+    },
+    {
+
+        "rgb": [233, 238, 43]
+    },
+    {
+
+        "rgb": [192, 238, 43]
+    },
+    {
+
+        "rgb": [137, 238, 43]
+    },
+    {
+
+        "rgb": [43, 238, 75]
+    },
+    {
+
+        "rgb": [43, 238, 138]
+    },
+    {
+
+        "rgb": [43, 238, 179]
+    },
+    {
+
+        "rgb": [43, 238, 210]
+    },
+    {
+
+        "rgb": [43, 238, 235]
+    },
+    {
+
+        "rgb": [43, 220, 238]
+    },
+    {
+
+        "rgb": [43, 201, 238]
+    },
+    {
+
+        "rgb": [43, 182, 238]
+    },
+    {
+
+        "rgb": [42, 162, 238]
+    },
+    {
+
+        "rgb": [43, 141, 238]
+    },
+    {
+
+        "rgb": [43, 119, 238]
+    },
+    {
+
+        "rgb": [43, 98, 238]
+    },
+    {
+
+        "rgb": [43, 72, 238]
+    },
+    {
+
+        "rgb": [100, 43, 238]
+    },
+    {
+
+        "rgb": [153, 43, 238]
+    },
+    {
+
+        "rgb": [195, 43, 238]
+    },
+    {
+
+        "rgb": [236, 43, 238]
+    },
+    {
+
+        "rgb": [238, 43, 187]
+    },
+    {
+
+        "rgb": [238, 43, 145]
+    },
+    {
+
+        "rgb": [238, 43, 111]
+    },
+    {
+
+        "rgb": [238, 43, 81]
+    },
+    {
+
+        "rgb": [238, 43, 51]
+    },
+    {
+
+        "rgb": [238, 78, 43]
+    }
+  ]
+</script>
+  <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://rawgithub.com/jasonrhodes/8552724/raw/e0dbb4be54ca3943020dc65e43bdaa38bd2070b2/colorConverter.js'></script>
+
+
+    <script  src="static/js/index3.js"></script>
+
+
+<div id="overlay" onclick="off()">
+  <div id="text">You will be presented with a circle of 32 colors. Your task is to click on all colors that could be described by the color word. Each color word will be displayed within the circle (e.g., <i>black</i>). Once you have selected a color from the circle it will appear in one of the squares above the color circle. To remove a color from your selection, simply click on the square containing that color. When you have finished your selection of color(s), click on <b>Next</b> to move onto the next word.
+
+  <section><b>Please click anywhere on the screen to start the task.</b></section>
+  </div>
+</div>
+
+<script>
+function on() {
+  document.getElementById("overlay").style.display = "block";
+};
+
+function off() {
+  document.getElementById("overlay").style.display = "none";
+};
+
+$(document).ready(function(){
+  if (reloadCount < 1){
+    on();
+  };
+});
+
+$(document).ready(function(){
+  if (reloadCount >= 1){
+    $("#text").html("There are still colors not selected. You will now be able to skip words, but you must associate the remaining colors with at least one color word before you can complete the task. <section><b>Please click anywhere on the screen to continue.</section></b>");
+    on();
+  };
+});
+
+</script>
+
+</body>
+
+</html>
