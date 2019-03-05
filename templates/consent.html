@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Color Categorization Consent Form</title>
+
+
+<style>
+body, html{
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+
+  color: #333322;
+}
+
+button{
+    display: inline-block;
+}
+
+.start{
+  margin: 2%;
+  margin-top: 2%;
+  display:inline-block;
+  height: auto;
+  width: auto;
+  background-color: white;
+
+  border: 2px solid;
+  border-right: 4px solid;
+  border-bottom: 5px solid;
+  border-color: #333322;
+  border-radius: 10px;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333322;
+  cursor: pointer;
+}
+
+.button_wrap{
+	text-align: center;
+}
+
+h1{
+  text-align: center;
+  margin-top: 3%;
+  margin-bottom: 4%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.buttonHolder{ text-align: center; }
+
+</style>
+
+</head>
+
+<body>
+
+<h1 id = "level">Consent Form</h1>
+
+<div style="text-align: justified; width: 70%; margin: 0 auto;">
+
+
+<p>This study is concerned with color words. You will first be shown a wheel of 32 colors and a specific color word (e.g., <i>black</i>). Your goal is to select which color(s) you associate with that word by clicking on the color. Once you have clicked on the relevant color(s), click on the <b>Next</b> button to generate the next color word. You can select the same color(s) for different color words. These steps will keep repeating until you have associated all of the colors with at least one color word. Overall, the task will take approximately 5 minutes of your time.
+<p>To proceed, please give your consent below after carefully reading the following paragraph:</p>
+<p><i>I consent that the anonymous data I produce may be kept in the Max Planck Society's archives (Minds and Traditions research group). I consent to my anonymous data being used by the society's researchers as well as by other qualified researchers, for teaching or research purposes, in professional presentations and publications. I hereby agree to participate in the study. My participation is voluntary. I know that I have the opportunity to cancel my participation in this study at any time without notice for any reason and without any consequences.</i></p>
+
+<!-- <h3>Age</h3>
+<p><input type="number" id="age" min="18"/></p>
+<h3>Native Language</h3>
+<form action="/action_page.php">
+  <input type="radio" name="language" value="german"> Deutsch<br>
+  <input type="radio" name="language" value="english"> English<br>
+  <input type="radio" name="language" value="spanish"> Español<br>
+  <input type="radio" name="language" value="french"> Français<br>
+</form>  -->
+
+<div class="button_wrap"><p><input type="checkbox" onClick="tickOn()" id="consent_checkbox" />I agree to take part in this study.</p>
+</div>
+
+<div class="buttonHolder">
+  <form action="index.html" method="GET">
+  <span id="buttonAppear"></span>
+</form>
+</div>
+
+<link rel="prerender" href="index.html">
+
+<script type="text/javascript">
+
+// var number = document.getElementById('age');
+
+// number.onkeydown = function(e) {
+//     if(!((e.keyCode > 95 && e.keyCode < 106)
+//       || (e.keyCode > 47 && e.keyCode < 58)
+//       || e.keyCode == 8)) {
+//         return false;
+//     }
+// }
+
+
+function tickOn(){
+     document.getElementById("buttonAppear").innerHTML = "Please enter your Prolific ID: <input type= \"text\" name=\"prolific\"> </input> <button id=\"buttonAppear\" class=\"start\" onclick=\"sendJS()\" action=\"index.html\">Start Experiment</button>";
+}
+
+
+
+function sendJS() {
+	//var input = "Age:"+document.getElementById("age").value+";Language:"+document.getElementById("language").value,
+	url = 'index.html' //+ encodeURIComponent(input);
+
+	document.location.href = url;
+
+	//localStorage.setItem("age",inputAge.value);
+	//var output = 'Age: ' + document.getElementById('age').value + ';' + 'Language: ' + document.getElementById('language').value + ';';
+	//$.post("/postmethod", {output_data:output});
+    //var b = document.getElementById('name').value,
+    //    url = 'http://path_to_your_html_files/next.html?name=' + encodeURIComponent(b);
+
+    //document.location.href = url;
+
+}
+
+</script>
+
+</body>
+
+</html>
