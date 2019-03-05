@@ -94,3 +94,6 @@ def get_python_data():
 @app.route('/finish.html')
 def finish():
     return render_template('finish.html')
+
+if __name__ == "__main__":
+	app.run()
