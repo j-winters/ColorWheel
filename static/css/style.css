@@ -1,0 +1,153 @@
+
+section{
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    text-align: center;
+}
+
+p {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40px;
+  text-align: center;
+  top: 250px;
+}
+
+h2 {
+  position: relative;
+  text-align: left;
+  top: 450px;
+}
+
+h3 {
+  position: relative;
+  text-align: left;
+  top: 450px;
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgb(192,192,192);
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.grid-container {
+  display: grid;
+  position: relative;
+  text-align: center;
+  grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+  background-color: rgb(255,255,255);
+  grid-area: 10px;
+  grid-gap: 10px;
+  justify-content: center;
+}
+.grid-item {
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(105,105,105);
+  height: 40px;
+  width: 40px;
+  padding: 2px;
+  text-align: center;
+}
+
+div .color-container {
+  position: absolute;
+  top: 180px;
+  left: 50%;
+  margin-left: -25px;
+  -webkit-transform-origin: center 300px;
+}
+div .color-container:hover {
+  z-index: 5;
+}
+div .color-container .color {
+  height: 70px;
+  width: 45px;
+  padding: 1px;
+  border-top-left-radius: 50% 3%;
+  border-top-right-radius: 50% 3%;
+  -webkit-transform: perspective(6em) rotateX(-20deg);
+  cursor: pointer;
+}
+div .color-container .color:hover {
+  -webkit-transition: all 300ms ease-out;
+  -webkit-transform: scale(1.8) perspective(6em) rotateX(-20deg);
+}
+div .color-container .color:hover span {
+  opacity: 1;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  top: 50%;
+  left: 50%;
+  font-size: 25px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#overlay2 {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+}
